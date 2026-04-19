@@ -68,13 +68,23 @@
 
         <form action="https://formspree.io/f/xzdygayp" method="POST">
 
+            <input type="hidden" name="_next" value="https://crinxaos.github.io/nova-landing-page/">
+
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde Nova 🚀">
+
             <input type="text" name="name" placeholder="Your Name" required>
 
             <input type="email" name="email" placeholder="Your Email" required>
 
             <textarea name="message" placeholder="Your Message" required></textarea>
 
-            <button type="submit">Send</button>
+            <input type="text" name="_gotcha" style="display:none">
+
+            <button type="submit" id="submit-btn">Send</button>
+
+            <p id="form-status" style="display:none; color: #00ff88;">
+                Message sent successfully
+            </p>
 
         </form>
 
@@ -85,9 +95,9 @@
             </p>
 
             <p>
-                Or WhatsApp
+                Or
                 <a href="https://wa.me/50687700997" target="_blank">
-                    +506 8770-0997
+                    WhatsApp
                 </a>
             </p>
         </div>
