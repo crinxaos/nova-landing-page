@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Landing Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">NovaDev</div>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>We Build Modern Web Solutions</h1>
+            <p>Clean, fast and responsive websites for your business</p>
+            <a href="#contact" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+        <h2>Services</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>Responsive and modern websites built with HTML, CSS & JS</p>
+            </div>
+
+            <div class="card">
+                <h3>Backend Systems</h3>
+                <p>PHP & MySQL systems for business management</p>
+            </div>
+
+            <div class="card">
+                <h3>Automation</h3>
+                <p>Python scripts to automate repetitive tasks</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section dark">
+        <h2>About Us</h2>
+        <p>
+            We are focused on building simple but powerful digital solutions.
+            Our goal is to help businesses grow through technology.
+        </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+
+        <p id="formMessage"></p>
+    </section>
+
+    <footer>
+        <p>© 2026 NovaDev | Built by Marlon Monge</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
