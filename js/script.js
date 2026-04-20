@@ -1,13 +1,17 @@
 const form = document.querySelector("#contact form");
 const status = document.getElementById("form-status");
+
 const button = document.getElementById("submit-btn");
+const btnText = document.getElementById("btn-text");
+const loader = document.getElementById("btn-loader");
 
 form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
     // 🔄 Activar loading
     button.disabled = true;
-    button.innerText = "Sending...";
+    btnText.innerText = "Sending...";
+    loader.classList.remove("hidden");
 
     const data = new FormData(form);
 
@@ -22,18 +26,20 @@ form.addEventListener("submit", async function (e) {
 
         if (response.ok) {
             status.innerText = "Message sent successfully 🤘";
-            status.style.display = "block";
+            status.classList.add("show");
             form.reset();
         } else {
             status.innerText = "Oops... something went wrong 💀";
-            status.style.display = "block";
+            status.classList.add("show");
         }
     } catch (error) {
         status.innerText = "Network error 💀";
-        status.style.display = "block";
+        status.classList.add("show");
     }
 
     // 🔁 Restaurar botón
     button.disabled = false;
-    button.innerText = "Send";
+    btnText.innerText = "Send";
+    loader.classList.add("show");   // mostrar
+    loader.classList.remove("show"); // ocultar
 });
